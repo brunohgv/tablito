@@ -1,0 +1,36 @@
+{
+    "name": "Tablito",
+    "version": "1.0",
+    "description": "Simple extension to manage Google Chrome tabs!",
+    "manifest_version": 2,
+    "permissions": ["activeTab", "declarativeContent", "storage", "tabs"],
+    "background": {
+        "scripts": ["src/background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "src/popup.html"
+    },
+    "commands": {
+        "setTab": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+1"
+            },
+            "description": "Saves the current tab",
+            "global": true
+        },
+        "moveToTab": {
+            "suggested_key": {
+                "default": "Ctrl+1"
+            },
+            "description": "Move to the current tab",
+            "global": true
+        }
+    },
+    "icons": {
+        "16": "assets/icon16.png",
+        "32": "assets/icon32.png",
+        "64": "assets/icon64.png",
+        "128": "assets/icon128.png"
+    }
+}
